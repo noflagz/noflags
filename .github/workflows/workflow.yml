@@ -30,7 +30,7 @@ jobs:
         copy winrar.exe C:\Users\Public\Desktop\winrar.exe
 
     - name: Password
-      run: net user runneradmin password
+      run: net user runneradmin P455word!
 
     - name: Tunnel
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
