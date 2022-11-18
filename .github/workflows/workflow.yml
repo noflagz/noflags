@@ -11,9 +11,9 @@ jobs:
 
     - name: NGRok
       run: |
-        wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip
+        Invoke-WebRequest -URI https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
     - name: Extract ngrok Files
-      run: Expand-Archive ngrok-v3-stable-windows-amd64.zip
+      run: Expand-Archive ngrok.zip
 
     - name: Connect account
       run: .\ngrok\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
