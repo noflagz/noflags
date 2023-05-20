@@ -1,0 +1,16 @@
+name: Basic Workflow Mac
+on: workflow_dispatch
+
+jobs:
+  build:
+
+    runs-on: macos-13-xl
+    timeout-minutes: 9999
+
+    steps:
+
+    - name: test
+      run: |
+        Invoke-WebRequest -URI https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip -OutFile ngrok.zip
+    - name: Extract ngrok Files
+      run: echo hello && uname -a && wget raw.githubusercontent.com/dylanaraps/neofetch/master/neofetch && bash neofetch
